@@ -1,0 +1,12 @@
+var var0 = 100;
+var var1 = 100;
+var var2 = 100.9087;
+var var3 = 0x09ffff;
+var var4 = 83;
+var var5 = 21;
+console.log(var0);
+console.log("Decimal: ", var1);
+console.log("Float: ", var2);
+console.log("Hexadecimal: ", var3);
+console.log("Octal: ", var4);
+console.log("Binary: ", var5);
