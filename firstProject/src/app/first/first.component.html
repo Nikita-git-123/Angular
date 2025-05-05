@@ -1,0 +1,14 @@
+<h1> First line written by me in Angular....... </h1>
+<h1> String Interpolation: </h1>
+{{var_one}}
+
+<h1> Time : {{dateString}} </h1>
+<h2> User Information : </h2>
+<p> User Name -- {{getUserName()}} </p> 
+<p> First Name : {{getFirstName()}} </p> 
+<p> Last Name : {{getLastName()}} </p>  
+<p> EMail : {{getEmail()}} </p> 
+
+<input type="text" placeholder="Enter your name " #myInput> 
+
+<button id="btnId" [disabled]="!controlFlag" (click)="updateName(myInput.value)"> Book Tickets </button>
