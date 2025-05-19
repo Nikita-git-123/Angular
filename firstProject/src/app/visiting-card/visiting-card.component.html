@@ -1,0 +1,24 @@
+<h1> Visitng Card.......... Employee Details Screen : </h1>>
+
+<div *ngFor="let emp of users">
+
+    Employee Name : {{emp.name}} <br> 
+    Employee Title : {{emp.title}} <br> 
+    Employee Salary : {{emp.salary}} <br> 
+
+    <div [ngSwitch]="emp.department"> Employee Departemnt : 
+        <span *ngSwitchCase="'1'"> HR </span>
+        <span *ngSwitchCase="'2'"> Technical </span>
+        <span *ngSwitchCase="'3'"> Finance </span>
+        <span *ngSwitchDefault > Others </span>
+    </div>
+
+    <div *ngIf="emp.address.length>0" > 
+        Employee Address : {{emp.address}}
+    </div>
+
+    <div *ngIf="emp.phones.length>0" > 
+        Employee Phone : {{emp.phones}}
+    </div>
+
+</div>

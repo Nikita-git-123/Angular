@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-first',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './first.component.html',
   styleUrl: './first.component.css'
 })
@@ -17,6 +18,8 @@ export class FirstComponent {
   email:string="";
 
   dateString:string="";
+
+  guestName:string="Ashok";
 
   constructor() {
     this.userName="Nikita12345";

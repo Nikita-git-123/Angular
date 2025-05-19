@@ -1,0 +1,38 @@
+<p>empdetails works!</p>
+
+<table>
+    <thead>
+        <tr>
+            <th> ID </th>
+            <th> Name </th>
+            <th> Gender </th>
+            <th> Title   </th>
+            <th> Salary </th>
+            <th> Department </th>
+            <th> Address </th>
+            <th> DOb </th>
+        </tr>
+    </thead>
+    <tbody>
+       <tr *ngFor="let emp of employees;trackBy:trackByEmpCode">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.gender}}</td>
+            <td> {{emp.title}} </td>
+            <td>{{emp.salary}}</td>
+           
+            <td [ngSwitch]="emp.department">
+                <span *ngSwitchCase="'1'">HR</span>
+                <span *ngSwitchCase="'2'">IT</span>
+                <span *ngSwitchCase="'3'">security</span>
+                <span *ngSwitchDefault>NA</span>
+            </td>
+            <td>{{emp.address}}</td>
+            <td>{{emp.dob}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br> 
+
+<button (click)="getLatestData()"> Refresh </button>

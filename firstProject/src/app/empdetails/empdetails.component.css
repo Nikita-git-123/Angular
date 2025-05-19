@@ -1,0 +1,9 @@
+table{
+    color: blue;
+    font-size: large;
+}
+
+td{
+    color: blue;
+    border: 2px solid black;
+}

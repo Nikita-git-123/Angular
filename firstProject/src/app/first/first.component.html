@@ -11,4 +11,12 @@
 
 <input type="text" placeholder="Enter your name " #myInput> 
 
-<button id="btnId" [disabled]="!controlFlag" (click)="updateName(myInput.value)"> Book Tickets </button>
+<button id="btnId" [disabled]="!controlFlag" (click)="updateName(myInput.value)"> Book Tickets </button> <br> <br> 
+
+Employee Name : {{userName}}
+
+<br> <br> 
+<h2> Two Way Data Binding </h2>
+<input type="text" placeholder="Two Way Data Binding" [(ngModel)]="guestName"> 
+<br> <br> 
+Entered Guest Name : {{guestName}}
