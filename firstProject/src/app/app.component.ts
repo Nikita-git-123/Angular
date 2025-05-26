@@ -5,10 +5,11 @@ import { SecondComponent } from './second/second.component';
 import { VisitingCardComponent } from './visiting-card/visiting-card.component';
 import { user } from './user';
 import { EmpdetailsComponent } from './empdetails/empdetails.component';
+import { DefaultpipeComponent } from './defaultpipe/defaultpipe.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FirstComponent, SecondComponent, VisitingCardComponent, EmpdetailsComponent],
+  imports: [RouterOutlet, FirstComponent, SecondComponent, VisitingCardComponent, EmpdetailsComponent, DefaultpipeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

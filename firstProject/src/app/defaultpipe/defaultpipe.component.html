@@ -1,0 +1,39 @@
+
+<h1> Default Pipes Provided By Angular are mentioned Below</h1>
+
+<h2>{{var_one | uppercase}}</h2>
+
+<h2>{{var_two | lowercase }}</h2>
+
+<h2>{{var_three | titlecase }}</h2>
+
+<h2>{{var_four | number:"3.2-4"}}</h2>
+<!-- 100.12345   ==> 100.1235-->
+<h2>{{var_four | number:"4.1-2"}}</h2>
+<!-- 100.12345 ==> 0,100.12-->
+
+<h2>{{var_five | currency}}</h2><!-- $100.00 -->
+
+<h2>{{var_five | currency:"INR"}}</h2><!-- ₹100.00 -->
+
+<h2>{{var_five | currency:"EUR"}}</h2> <!-- €100.00 -->
+
+<h2>Default Date ==> {{var_six }}</h2><!-- Thu Dec 26 2024 20:36:39 GMT+0530 (India Standard Time) -->
+
+<h2>Date with dd-MM-YY ==>  {{var_six | date: "dd-MM-YY"}}</h2><!--  26-12-24 -->
+
+<h2>Date with dd-MM-YYYY ==>  {{var_six | date: "dd-MM-YYYY"}}</h2><!--  26-12-2024 -->
+
+<h2>Short Date ==>  {{var_six | date: "short"}}</h2><!--  12/26/24, 8:37 PM -->
+<h2>Medium Date ==>  {{var_six | date: "medium"}}</h2><!--  Dec 26, 2024, 8:38:28 PM -->
+<h2>Full Date ==>  {{var_six | date: "fullDate"}}</h2><!--  Thursday, December 26, 2024 -->
+
+<h2>JSON Data ==> {{var_eight | json}}</h2>
+
+<h2>{{var_nine | async }}</h2>
+
+<h2>Rever Pipe is {{var_one | reverse }} </h2>
+
+
+
+
