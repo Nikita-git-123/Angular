@@ -1,0 +1,30 @@
+<h1>Countries Page </h1>
+
+<table border="1" cellpadding="10px" cellspacing="10px" align="center">
+    <tr>
+        <thead>
+        <th>SNO</th>
+        <th>Name</th>
+        <th>Population</th>
+        <th>Native Name</th>
+        <th>Region</th>
+        <th>Flag</th>
+    </thead>    
+    </tr>
+
+    <tbody>
+        <tr *ngFor="let obj of countriesRes;let i=index">
+
+            <td>{{i+1}}</td>
+            <td>{{obj.name.common}}</td>
+            <td>{{obj.population}}</td>
+            <td>{{obj.name.official[0]}}</td>
+            <td>{{obj.capital}}</td>
+            
+           
+            <td>{{obj.region}}</td>
+            <td><img width="100px" height="50px" src="{{obj.flags.png}}"></td>
+        </tr>
+    </tbody>
+
+</table>

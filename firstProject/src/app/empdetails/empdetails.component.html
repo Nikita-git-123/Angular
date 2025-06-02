@@ -1,38 +1,44 @@
-<p>empdetails works!</p>
-
+<app-empcount 
+[all]="getTotalEmployeesCount()"
+[male]="getMaleEmployeesCount()"
+[female]="getFemaleEmployeesCount()"
+(countRadioButtonSelectionChanged)="onEmployeeRadioChange($event)"></app-empcount>
+<br><br>
 <table>
+
     <thead>
         <tr>
-            <th> ID </th>
-            <th> Name </th>
-            <th> Gender </th>
-            <th> Title   </th>
-            <th> Salary </th>
-            <th> Department </th>
-            <th> Address </th>
-            <th> DOb </th>
+            <th>EmployeeId</th>
+            <th>EmployeeName</th>
+            <th>Gender</th>
+            <th>Salary</th>
+            <th>Department</th>
+            <th>Address</th>
+          
+            <th>Age</th>
         </tr>
     </thead>
+
     <tbody>
-       <tr *ngFor="let emp of employees;trackBy:trackByEmpCode">
-            <td>{{emp.id}}</td>
-            <td>{{emp.name}}</td>
+        <ng-container *ngFor="let emp of employees;trackBy:trackByEmpCode">
+        <tr *ngIf="selectedRadioButtonValue==emp.gender || selectedRadioButtonValue=='All'">
+            <td>{{emp.empid}}</td>
+            <td>{{emp.empname|title:emp.gender}}</td>
             <td>{{emp.gender}}</td>
-            <td> {{emp.title}} </td>
-            <td>{{emp.salary}}</td>
+            <td>{{emp.salary|currency:'INR'}}</td>
            
             <td [ngSwitch]="emp.department">
                 <span *ngSwitchCase="'1'">HR</span>
                 <span *ngSwitchCase="'2'">IT</span>
-                <span *ngSwitchCase="'3'">security</span>
+                <span *ngSwitchCase="''">security</span>
                 <span *ngSwitchDefault>NA</span>
             </td>
             <td>{{emp.address}}</td>
-            <td>{{emp.dob}}</td>
+           
+            <td>{{emp.dob|age}}</td>
         </tr>
+    </ng-container>
     </tbody>
 </table>
-
-<br> 
-
+<br><br>
 <button (click)="getLatestData()"> Refresh </button>

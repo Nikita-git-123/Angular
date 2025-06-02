@@ -3,12 +3,12 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-empcount',
+  standalone: true,
   imports: [FormsModule],
   templateUrl: './empcount.component.html',
   styleUrl: './empcount.component.css'
 })
 export class EmpcountComponent {
-
 
   @Input()
   all:number=20;

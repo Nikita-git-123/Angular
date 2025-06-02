@@ -6,7 +6,20 @@
 
 <app-visiting-card [userObj]='userInput'> </app-visiting-card> 
 
-<app-defaultpipe></app-defaultpipe> -->
+<app-defaultpipe></app-defaultpipe> 
 
-<app-empdetails> </app-empdetails>
+<app-empdetails> </app-empdetails> -->
+
+<h1>Credit Card Details Screen</h1>
+<br><br>
+Card Number: <input type="text" [(ngModel)]="cardNumber" />
+<br>
+<img appCclogo [cardNumber]="cardNumber" />
+
+
+<!-- <app-lifecycle></app-lifecycle> 
+<input type="text" [(ngModel)]="userText">
+<app-simplechanges [simpleInput]='userText'></app-simplechanges> -->
+
+<!-- <app-countries></app-countries>  -->
 
